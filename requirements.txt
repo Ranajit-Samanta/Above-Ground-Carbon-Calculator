@@ -1,2 +1,5 @@
 openpyxl
+pandas
+smtplib
+email
 uuid
