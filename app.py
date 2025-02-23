@@ -563,43 +563,7 @@ col1,col2=st.columns([2,1])
 with col1:
 
 # # Email Configuration
-#     SMTP_SERVER = "smtp.gmail.com"
-#     SMTP_PORT = 587
-#     EMAIL_ADDRESS = "cleanplanet1234@gmail.com"  # Replace with your email
-#     EMAIL_PASSWORD = "fopgviqhkloyuxmb"  # Replace with your App Passwordfopg viqh kloy uxmb 
 
-#     def send_email(name, user_email, message):
-#         subject = f"New Contact Form Submission from {name}"
-#         body = f"Name: {name}\nEmail: {user_email}\n\nMessage:\n{message}"
-
-#         msg = MIMEText(body)
-#         msg["Subject"] = subject
-#         msg["From"] = user_email  # Shows the user's email as sender
-#         msg["To"] = EMAIL_ADDRESS  # Sends it to you
-
-#         try:
-#             server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
-#             server.starttls()  # Secure the connection
-#             server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
-#             server.sendmail(user_email, EMAIL_ADDRESS, msg.as_string())
-#             server.quit()
-#             return "✅ Your message has been sent successfully!"
-#         except Exception as e:
-#             return f"❌ Error: {str(e)}"
-
-# # Streamlit UI
-#     st.title("📩 Contact Us")
-
-#     name = st.text_input("Your Name")
-#     email = st.text_input("Your Email")
-#     message = st.text_area("Your Message")
-
-#     if st.button("Send Email"):
-#         if name and email and message:
-#             response = send_email(name, email, message)
-#             st.success(response)
-#         else:
-#             st.error("⚠️ Please fill in all fields.")
 # Load email credentials from Streamlit Secrets
     EMAIL_ADDRESS = st.secrets["email"]["EMAIL_ADDRESS"]
     EMAIL_PASSWORD = st.secrets["email"]["EMAIL_PASSWORD"]
